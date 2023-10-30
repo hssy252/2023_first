@@ -1,0 +1,60 @@
+/* 去除margin padding */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol
+li,
+dl,
+dt,
+dd,
+input {
+    margin: 0;
+    padding: 0;
+}
+/* 设置统一文字属性 */
+body {
+    font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei",
+    "Hiragino Sans GB","Heiti sc",
+    "WenQuanYi Micro Hei", sans-serif;
+}
+/* 去除列表默认样式 */
+ul,ol {
+    list-style: none;
+}
+/* 去除默认倾斜效果 */
+em,
+i {
+    font-style: normal;
+}
+/* a标签 */
+a {
+    text-decoration: none ;
+    color: #333;
+}
+img {
+    vertical-align: middle;
+}
+input {
+    border: none;
+    outline: none;
+    color: #333;
+}
+fl {
+    float: left;
+}
+fr {
+    float: right;
+}
+.clearfix::before,
+.clearfix::after {
+    content: "";
+    display: table;
+}
+.clearfix::after {
+    clear: both;
+}
