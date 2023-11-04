@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dino</title>
+    <link type="image/x-icon" rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="work.css">
+</head>
+<body>
+<div class="map">
+    
+    <img src="hill1.png" id="h1">
+    <img src="hill2.png" id="h2">
+    <img src="hill3.png" id="h3">
+    <img src="hill4.png" id="h4">
+    <img src="hill5.png" id="h5">
+    <img src="leaf.png" id="leaf">
+    <img src="tree.png" id="tree">
+    
+    <img src="plant.png" id="plant">
+
+    <div  class="dino" id="dino">
+        <div class="imgCont" id="imgCont">
+            <img src="dino.png">
+        </div>
+    </div>
+
+    <!-- 障碍物 -->
+    <div class="obstacle" id="obstacle">
+        <img src="obstacle.png" id="obstacle_img">
+    </div>
+    
+    <!-- 按钮 -->
+    <div class="start" id="start">
+        <input type="button" value="START" id="startB">
+    </div>
+    <div class="goal" id="goal">
+    </div>
+
+</div>
+    
+<div class="down" id="down">
+    <div class="textCont">
+        <h1>DINO游戏规则</h1>
+        <p>按下数字1~5使恐龙跳起，按下越大的数字，恐龙跳起的高度越高，在空中滞留的时间也越长</p>
+        <p>当恐龙跳起落地时踩中移动目标时，得分增加，增加值为按下的数字大小</p>
+        <p>当恐龙与移动目标相撞时游戏结束</p>
+        <p>按START开始或重新开始</p>
+    </div>
+    
+</div>
+
+
+<script src="work.js"></script>
+</body>
+</html>

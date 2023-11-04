@@ -1,0 +1,123 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.start{
+    position: absolute;
+    margin-top: 60px;
+    margin-left: 80px;
+    width: 100px;
+    background-color: #2e564e;
+
+    width: 150px;
+    height: 50px;
+    
+
+    /* text-align: center; */
+    border-radius: 25px;
+}
+.start input{
+    font-size: 30px;
+    color:aliceblue;
+
+    border: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+}
+
+.goal{
+    position: absolute;
+    margin-top: 150px;
+    margin-left: 80px;
+    width: 100px;
+    background-color: #2e564e;
+
+    width: 150px;
+    height: 50px;
+    font-size: 30px;
+    color:aliceblue;
+
+    text-align: center;
+    border-radius: 25px;
+}
+
+.map{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #b3dfe1;
+}
+
+.map img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100%; */
+    height: 100%;
+    width: 100%;
+}
+
+
+                            /* left,700px,top,340px ,width,100px*/
+.dino{
+    position: absolute;
+    left: 700px;
+    top: 340px;
+
+    width: 100px;
+    height: 400px;
+    /* background-color: #fff; */
+}
+.imgCont{
+    position: absolute;
+    left: 0;
+    top: 300px;
+
+    width: 100px;
+    height: 100px;
+    /* background-color: #be1212; */
+}
+.imgCont img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* height: 100%;
+    width: 100%; */
+}
+
+
+.obstacle{
+    position: absolute;
+    /* left: 45vw; */
+    top: 695px;
+
+    width: 10px;
+    height: 50px;
+    /* background-color: #fff; */
+}
+
+
+
+
+.down{
+    position: absolute;
+    margin-top: 100vh;
+
+    width: 100vw;
+    height: 100vh;
+    background-color: #003329;
+
+    
+}
+.textCont{
+    position: absolute;
+    margin-top: 250px;
+    margin-left: 500px;
+
+    text-align: center;
+    color: #fff;
+    /* background-color: #fff; */
+}
