@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="主页风格.css">
+    <title>刺客网</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!--标明导航链接部分  -->
+    <nav>
+        <ul>
+            <li><a style="color: black;" href="#">小鸡岛</a></li>
+            <li><a href="#">玄武国</a></li>
+            <li><a href="#">斯特国</a></li>
+            <li><a href="#">异能国</a></li>
+            <li><a href="#">暗影刺客</a></li>
+            <li><a href="#">刺客排行榜</a></li>
+
+        </ul>
+    </nav>
+    <br>
+    </div>
+    <div id="banner">
+
+        <ul id="imglist">
+
+            <li><a href=""><img src="海景合照1.png" alt=""></a></li>
+
+            <li><a href=""><img src="合照大保健.png" alt=""></a></li>
+
+            <li><a href=""><img src="鸡大保标题.png" alt=""></a></li>
+
+            <li><a href=""><img src="刀柒.png" alt=""></a></li>
+
+            <li><a href=""><img src="img/pic1.jpeg" alt=""></a></li>
+
+        </ul>
+
+        <ul id="icolist">
+
+            <li>1</li>
+
+            <li>2</li>
+
+            <li>3</li>
+
+            <li>4</li>
+
+        </ul>
+
+        <div class="prev"></div>
+
+        <div class="next"></div>
+
+    </div>
+    <br><br><br><br><br><br><br>
+
+    
+    <div class="text">
+        <br><br><br><br>
+        <img  src="五六七地图.jpg" alt="" style="margin: auto; display:block;border-radius: 10px; width: 800px;height: 400px;">
+        <br>
+        <img src="六大暗影刺客.png" alt="">
+        <br>
+        <img style="width: 300; height: 500px;" src="师姐.jpg" alt="">
+        <br>
+        <img src="白狐.png" alt="">
+        <br>
+        <img src="" alt="">
+        <br>
+        <img src="" alt="">
+    </div>
+    
+        <script>  alert('登录成功')
+            let dh= prompt('你的代号是')
+            var hy="欢迎，刺客"+dh
+            alert(hy)
+            
+
+            var esico = document.getElementById('icolist').getElementsByTagName('li');
+
+            var eicolist = document.querySelector('#icolist');
+
+            var eimglist = document.querySelector('#imglist');
+
+            var etest = document.querySelector('#test');
+
+            var eprev = document.querySelector('.prev');
+
+            var enext = document.querySelector('.next');
+
+            var left = 0;
+
+            var timer;
+
+            esico[2].style.backgroundColor = 'red';
+
+            run();
+
+            // alert(Math.floor(3190/800));
+
+            function run() {
+
+                if (left <= -3200) {
+
+                    left = 0;
+
+                }
+
+                var m = Math.floor(-left / 800);
+
+                imglist.style.marginLeft = left + 'px';
+
+                var n = (left % 800 == 0) ? n = 3000 : n = 6;
+
+                left -= 10;
+
+                icochange(m);
+
+                timer = setTimeout(run, n);
+
+            }
+
+            function icochange(m) {
+
+                for (let index = 0; index < esico.length; index++) {
+
+                    esico[index].style.backgroundColor = '';
+
+                }
+
+                if (m < esico.length) {
+
+                    esico[m].style.backgroundColor = 'red';
+
+                }
+
+            }
+
+            function imgchange(n) {
+
+                let lt = - (n * 800)
+
+                imglist.style.marginLeft = lt + 'px';
+
+                left = lt;
+
+            }
+
+            eprev.onclick = function () {
+
+                let prevgo = Math.floor(-left / 800) - 1;
+
+                if (prevgo == -1) {
+
+                    prevgo = 3;
+
+                }
+
+                imgchange(prevgo);
+
+                icochange(prevgo);
+
+            }
+
+            enext.onclick = function () {
+
+                let nextgo = Math.floor(-left / 800) + 1;
+
+                if (nextgo == 4) {
+
+                    nextgo = 0;
+
+                }
+
+                imgchange(nextgo);
+
+                icochange(nextgo);
+
+            }
+
+            eicolist.onclick = function () {
+
+                var tg = event.target;
+
+                let ico = tg.innerHTML - 1;
+
+                imgchange(ico);
+
+                icochange(ico);
+
+            }
+
+            eimglist.onmouseover = function () {
+
+                clearTimeout(timer);
+
+            }
+
+            eimglist.onmouseout = function () {
+
+                run();
+
+            }
+          
+
+
+        </script>
+        
+
+</body>
+
+</html>
